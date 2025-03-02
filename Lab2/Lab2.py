@@ -8,12 +8,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-'''
 # 1.1. Wczytaj dane z pliku lab2.csv
 df = pd.read_csv('lab2.csv', sep=";")
 
 
-# 1.2. Sprawdź podstawowe informacje o zbiorze danych
+# 1.2. Sprawdź podstawowe informacje o zbiorze danych (df.info(), df.describe(),
+#df.head()).
 print("Informacje o DataFrame:")
 print(df.info())
 print("\nStatystyki opisowe:")
@@ -21,13 +21,13 @@ print(df.describe())
 print("\nPierwsze wiersze:")
 print(df.head())
 
-# 1.3. Usuń brakujące wartości (NaN) - dropna()
+# 1.3. Usuń brakujące wartości poprzez wykorzystanie dropna.
 df = df.dropna()
 
-# 1.4. Posortuj dane rosnąco po kolumnie x
+# 1.4. Posortuj dane w zbiorze rosnąco po kolumnie x
 df = df.sort_values(by='x', ascending=True)
 
-# 1.5. Wykonaj wykres zależności y(x)
+# 1.5. Wykonaj podstawową wizualizację: utwórz wykres zależności y(x).
 plt.figure(figsize=(10, 8))
 plt.plot(df['x'], df['y'], marker='o', linestyle='-')
 #sns.lineplot(data=df, x='x', y='y', marker='o')
@@ -36,7 +36,7 @@ plt.ylabel('y')
 plt.title('Wykres zależności y od x')
 plt.grid(True)
 plt.show()
-'''
+
 # 3.1. Zadeklaruj dwuwymiarową tablicę ndarray o wymiarach 4x5. Uzupełnij ją
 # wybranymi liczbami całkowitymi.
 array = np.array([[1,  2,  3,  4,  5],
